@@ -1,0 +1,54 @@
+.activity__title {
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 1.16;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: var(--main-title-sm-color);
+
+	margin-bottom: 50px;
+}
+
+.activity__list {
+	display: flex;
+
+	position: relative;
+}
+
+.activity__item  {
+
+	&:not(:last-child) {
+		margin-right: 30px;
+	}
+}
+
+.activity__img {
+	display: block;
+}
+
+.activity__caption {
+	width: 370px;
+	height: 70px;
+	padding: 27px 0;
+
+	background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8));
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	position: absolute;
+	bottom: 0;
+}
+
+.activity__text {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 1.14;
+	text-align: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+
+	color: #FFFFFF;
+}

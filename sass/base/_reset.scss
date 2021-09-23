@@ -1,0 +1,22 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+ul {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.link {
+	text-decoration: none; /* убирает все подчеркивания */
+}
+
+.list {
+	list-style: none; /* убирает все маркеры в списках */
+}

@@ -1,0 +1,121 @@
+.portfolio-button {
+	display: flex;
+	justify-content: center;
+
+	margin-bottom: 50px;
+}
+
+.portfolio-button__item {
+
+	&:not(:last-child) {
+		margin-right: 8px;
+	}
+}
+
+.portfolio-button__btn {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.62;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: #212121;
+
+	border-radius: 4px;
+
+	padding: 6px 22px;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		color: #FFFFFF;
+		background: var(--main-accent-color);
+
+		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	}
+}
+
+.portfolio-content {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -30px;
+	margin-top: -30px;
+}
+
+.portfolio-content__item {
+	flex-basis: calc(100% / 3 - 30px);
+	margin-left: 30px;
+	margin-top: 30px;
+
+	position: relative;
+
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover {
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+}
+
+.portfolio-content__overlay {
+	position: relative;
+	overflow: hidden;
+}
+
+.portfolio-content__img {
+	display: block;
+}
+
+.portfolio-content__description {
+	widows: 100%;
+	height: 100%;
+	padding: 63px 24px;
+
+	font-family: Roboto;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 1.56;
+	letter-spacing: 0.03em;
+
+	color: #FFFFFF;
+	background-color: rgba(33, 150, 243, 0.9);
+
+	position: absolute;
+	bottom: 0;
+
+	transform: translateY(100%);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	.portfolio-content__item:hover & {
+		transform: translateY(0%);
+	}
+}
+
+.portfolio-content__caption {
+	display: block;
+	padding: 20px 24px;
+	border-right: 1px solid #EEEEEE;
+	border-left: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.portfolio-content__title {
+	font-family: Roboto;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: 0.06em;
+	color: var(--main-title-sm-color);
+
+	margin-bottom: 8px;
+}
+
+.portfolio-content__text {
+	font-family: Roboto;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1.87;
+	letter-spacing: 0.03em;
+	color: var(--main-text-color);
+}
