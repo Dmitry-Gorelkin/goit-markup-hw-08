@@ -131,6 +131,8 @@ ul {
 
 .social {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social__item {
@@ -188,8 +190,14 @@ ul {
 }
 
 .header-nav {
-  display: flex;
-  align-items: center;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header-nav__list {
@@ -202,6 +210,7 @@ ul {
 
 .header-nav__link {
   display: block;
+  font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -224,13 +233,20 @@ ul {
   height: 4px;
   background-color: var(--main-accent-color);
   border-radius: 2px;
+  flex-shrink: 0;
   position: absolute;
   bottom: 0;
 }
 
 .header-contacts__list {
-  display: flex;
-  margin-left: auto;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header-contacts__list {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .header-contacts__item:not(:last-child) {
@@ -240,6 +256,7 @@ ul {
 .header-contacts__link {
   display: flex;
   align-items: center;
+  font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -257,6 +274,157 @@ ul {
 .header-contacts__icon {
   fill: currentColor;
   margin-right: 10px;
+}
+
+.header-mob {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-mob {
+    display: none;
+  }
+}
+
+.header-mob__btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-mob__btn:hover, .header-mob__btn:focus {
+  fill: var(--main-accent-color);
+}
+
+.header-mob__icon {
+  display: block;
+}
+
+.menu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 48px;
+  padding-left: 40px;
+  background-color: #FFFFFF;
+}
+
+.menu__btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu__btn:hover, .menu__btn:focus {
+  fill: var(--main-accent-color);
+}
+
+.menu-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu-nav__link {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.02em;
+  color: var(--header-nav-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-nav__link:hover, .menu-nav__link:focus {
+  color: var(--main-accent-color);
+}
+
+.menu-bottom {
+  position: absolute;
+  bottom: 48px;
+}
+
+.menu-contacts {
+  margin-bottom: 64px;
+}
+
+.menu-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu-contacts__link {
+  font-family: Roboto;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--header-text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-contacts__link:hover, .menu-contacts__link:focus {
+  color: var(--main-accent-color);
+}
+
+.menu-contacts__link--tel {
+  font-size: 34px;
+  line-height: calc(40 / 34);
+}
+
+.menu-contacts__link--mail {
+  font-size: 24px;
+  line-height: calc(28 / 24);
+}
+
+.menu-social__list {
+  display: flex;
+}
+
+.menu-social__item {
+  position: relative;
+}
+
+.menu-social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.menu-social__item:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 1px;
+  background-color: rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+  transform-origin: right top;
+  position: absolute;
+  right: -10px;
+}
+
+.menu-social__link {
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  letter-spacing: 0.02em;
+  color: var(--main-accent-color);
 }
 
 .heading {
@@ -597,8 +765,8 @@ ul {
 }
 
 .backdrop {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   position: fixed;
   top: 0;
   background-color: rgba(0, 0, 0, 0.2);
