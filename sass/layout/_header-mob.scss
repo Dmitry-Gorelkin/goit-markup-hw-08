@@ -207,11 +207,15 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 12px;
     line-height: calc(22 / 18);
     letter-spacing: 0.02em;
 
     color: var(--main-accent-color);
+
+    @media screen and (min-width: 480px) {
+        font-size: 18px;
+	}
 }
 
 
