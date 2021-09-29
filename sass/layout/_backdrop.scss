@@ -21,8 +21,8 @@
 }
 
 .modal {
-	width: 528px;
-	min-height: 581px;
+	width: calc(100% - 30px);
+	min-height: 609px;
 
 	padding: 40px;
 
@@ -31,6 +31,19 @@
 	border-radius: 4px;
 
 	position: relative;
+
+	@media screen and (min-width: 480px) {
+		width: 450px;
+	}
+
+	@media screen and (min-width: 768px) {
+		
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 528px;
+		min-height: 581px;
+	}
 }
 
 .modal-close {
@@ -177,11 +190,20 @@
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 14px;
-	line-height: 1.71;
+	font-size: 12px;
+	line-height: calc(14 / 12);
 	letter-spacing: 0.03em;
 
 	color: var(--main-text-color);
+
+	@media screen and (min-width: 768px) {
+		
+	}
+
+	@media screen and (min-width: 1200px) {
+		font-size: 14px;
+		line-height: 1.71;
+	}
 }
 
 .modal-checkbox__icon {
