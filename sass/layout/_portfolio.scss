@@ -1,14 +1,33 @@
 .portfolio-button {
 	display: flex;
-	justify-content: center;
+	flex-wrap: wrap;
 
-	margin-bottom: 50px;
+	margin-bottom: 25px;
+
+	@media screen and (min-width: 768px) {
+		justify-content: center;
+
+		margin-bottom: 30px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 50px;
+	}
 }
 
 .portfolio-button__item {
+	margin-bottom: 15px;
 
 	&:not(:last-child) {
 		margin-right: 8px;
+	}
+
+	@media screen and (min-width: 768px) {
+		margin-bottom: unset;
+	}
+
+	@media screen and (min-width: 1200px) {
+		
 	}
 }
 
@@ -38,16 +57,31 @@
 }
 
 .portfolio-content {
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: -30px;
-	margin-top: -30px;
+	// display: flex;
+	// flex-wrap: wrap;
+	// margin-left: -30px;
+	// margin-top: -30px;
+
+	display: block;
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -30px;
+    	margin-top: -30px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		
+	}
 }
 
 .portfolio-content__item {
-	flex-basis: calc(100% / 3 - 30px);
-	margin-left: 30px;
-	margin-top: 30px;
+	width: 100%;
+	
+	// flex-basis: calc(100% / 3 - 30px);
+	// margin-left: 30px;
+	// margin-top: 30px;
 
 	position: relative;
 
@@ -56,6 +90,30 @@
 	&:hover {
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	}
+
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+
+	@media screen and (min-width: 768px) {
+		flex-basis: calc(100% / 2 - 30px);
+		margin-left: 30px;
+		margin-top: 30px;
+
+		&:not(:last-child) {
+			margin-bottom: unset;
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		flex-basis: calc(100% / 3 - 30px);
+	}
+}
+
+.portfolio-content__link {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 
 .portfolio-content__overlay {
@@ -64,6 +122,8 @@
 }
 
 .portfolio-content__img {
+	width: 100%;
+	height: auto;
 	display: block;
 }
 
@@ -98,6 +158,8 @@
 	border-right: 1px solid #EEEEEE;
 	border-left: 1px solid #EEEEEE;
 	border-bottom: 1px solid #EEEEEE;
+
+	flex-grow: 1;
 }
 
 .portfolio-content__title {
