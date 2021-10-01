@@ -1,3 +1,15 @@
+.features {
+	padding-top: 60px;
+
+	@media screen and (min-width: 768px) {
+		
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding-top: 94px;
+	}
+}
+
 .features__list {
 	// display: flex;
 
@@ -62,9 +74,18 @@
 	line-height: 1.14;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
+	text-align: center;
 	color: var(--main-title-sm-color);
 
 	margin-bottom: 10px;
+
+	@media screen and (min-width: 768px) {
+		text-align: left;
+	}
+
+	@media screen and (min-width: 1200px) {
+		
+	}
 }
 
 .features__text {
