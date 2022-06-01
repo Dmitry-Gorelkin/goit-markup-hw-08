@@ -1,184 +1,176 @@
 .portfolio-button {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-	margin-bottom: 25px;
+  margin-bottom: 25px;
 
-	@media screen and (min-width: 768px) {
-		justify-content: center;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
 
-		margin-bottom: 30px;
-	}
+    margin-bottom: 30px;
+  }
 
-	@media screen and (min-width: 1200px) {
-		margin-bottom: 50px;
-	}
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio-button__item {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 
-	&:not(:last-child) {
-		margin-right: 8px;
-	}
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
 
-	@media screen and (min-width: 768px) {
-		margin-bottom: unset;
-	}
+  @media screen and (min-width: 768px) {
+    margin-bottom: unset;
+  }
 
-	@media screen and (min-width: 1200px) {
-		
-	}
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .portfolio-button__btn {
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.62;
-	text-align: center;
-	letter-spacing: 0.03em;
-	color: #212121;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
 
-	border-radius: 4px;
+  border-radius: 4px;
 
-	padding: 6px 22px;
+  padding: 6px 22px;
 
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-	&:hover,
-	&:focus {
-		color: #FFFFFF;
-		background: var(--main-accent-color);
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background: var(--main-accent-color);
 
-		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-	}
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .portfolio-content {
-	// display: flex;
-	// flex-wrap: wrap;
-	// margin-left: -30px;
-	// margin-top: -30px;
+  display: block;
 
-	display: block;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 
-	@media screen and (min-width: 768px) {
-		display: flex;
-		flex-wrap: wrap;
-		margin-left: -30px;
-    	margin-top: -30px;
-	}
-
-	@media screen and (min-width: 1200px) {
-		
-	}
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .portfolio-content__item {
-	width: 100%;
-	
-	// flex-basis: calc(100% / 3 - 30px);
-	// margin-left: 30px;
-	// margin-top: 30px;
+  width: 100%;
 
-	position: relative;
-	z-index: 1;
+  position: relative;
+  z-index: 1;
 
-	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-	&:hover {
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	}
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 
-	&:not(:last-child) {
-		margin-bottom: 30px;
-	}
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 
-	@media screen and (min-width: 768px) {
-		flex-basis: calc(100% / 2 - 30px);
-		margin-left: 30px;
-		margin-top: 30px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
 
-		&:not(:last-child) {
-			margin-bottom: unset;
-		}
-	}
+    &:not(:last-child) {
+      margin-bottom: unset;
+    }
+  }
 
-	@media screen and (min-width: 1200px) {
-		flex-basis: calc(100% / 3 - 30px);
-	}
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .portfolio-content__link {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .portfolio-content__overlay {
-	position: relative;
-	overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .portfolio-content__img {
-	display: block;
-	width: 100%;
-	height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .portfolio-content__description {
-	widows: 100%;
-	height: 100%;
-	padding: 63px 24px;
+  widows: 100%;
+  height: 100%;
+  padding: 63px 24px;
 
-	font-family: Roboto;
-	font-weight: normal;
-	font-size: 18px;
-	line-height: 1.56;
-	letter-spacing: 0.03em;
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
 
-	color: #FFFFFF;
-	background-color: rgba(33, 150, 243, 0.9);
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
 
-	position: absolute;
-	bottom: 0;
+  position: absolute;
+  bottom: 0;
 
-	transform: translateY(100%);
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-	.portfolio-content__item:hover & {
-		transform: translateY(0%);
-	}
+  .portfolio-content__item:hover & {
+    transform: translateY(0%);
+  }
 }
 
 .portfolio-content__caption {
-	display: block;
-	padding: 20px 24px;
-	border-right: 1px solid #EEEEEE;
-	border-left: 1px solid #EEEEEE;
-	border-bottom: 1px solid #EEEEEE;
+  display: block;
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 
-	flex-grow: 1;
+  flex-grow: 1;
 }
 
 .portfolio-content__title {
-	font-family: Roboto;
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 2;
-	letter-spacing: 0.06em;
-	color: var(--main-title-sm-color);
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-title-sm-color);
 
-	margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .portfolio-content__text {
-	font-family: Roboto;
-	font-weight: normal;
-	font-size: 16px;
-	line-height: 1.87;
-	letter-spacing: 0.03em;
-	color: var(--main-text-color);
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
 }
